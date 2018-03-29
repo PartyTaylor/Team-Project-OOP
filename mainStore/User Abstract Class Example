@@ -8,10 +8,9 @@ public abstract class User
 {
   private string UserName;
   private string FirstName;
+  private string MiddleInitial;
   private string LastName;
   private string EmailAddress;
   private string Password;
   
-  ??? 
-  
-  Should cartTotal and Taxes go in here or main?
+
