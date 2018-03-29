@@ -1,0 +1,27 @@
+
+package UberStock;
+
+@author Taylor Jones 
+@author Emily Rodriguez
+
+public class UClubMember extends User 
+{
+  private final double rewards = 0.05;
+  private final double AnnualFee = 19.95;
+  private double RewardAmount;
+  
+  public double getRewards() {
+    return rewards;
+  }
+  
+  public double getAnnualFee(){
+    return AnnualFee;
+    }
+    
+    public getRewardAmount(){
+      return rewardAmount;
+    }
+    
+    public void setRewardAmount(){
+      this.RewardAmount = this.getRewards() //Times the cart total???
+   }
