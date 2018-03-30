@@ -17,26 +17,25 @@ import java.util.logging.Logger;
  * @author Taylor Jones
  * @author Emily Rodriguez 
  */
-public class BedBath extends Category{
-    
+public class Rugs extends Category{
     //initalize the needed varibales
     PrintWriter pw;
     String [] itemDescriptions = new String[5];
     double [] itemPrices = new double[5];
     
     //sets the descriptions for the names
-    public BedBath() throws FileNotFoundException {
-        itemDescriptions[0] = "Harper Blvd Laird Granite Top Bath Vanity Sink";
-        itemDescriptions[1] = "Classique Espresso Double-door Floor Cabinet";
-        itemDescriptions[2] = "OVE Decors Rachel 70-inch Freestanding Bathtub";
-        itemDescriptions[3] = "Brown Upholstered Headboard with DiamondTufting";
-        itemDescriptions[4] = "1-Drawer Side Table w/ Charing Dock by iNSPIRE";
+    public Rugs() throws FileNotFoundException {
+        itemDescriptions[0] = "Safavieh Hudson Diamond Shag Ivory/Grey                  ";
+        itemDescriptions[1] = "Safavieh Monaco Vintage Bohiemian Multicolored Distressed";
+        itemDescriptions[2] = "Noursion Alhoa Indoor/Outdoor Multicolor                 ";
+        itemDescriptions[3] = "Safavieh Hudson Shag Modern Ogee Navy/Ivory              ";
+        itemDescriptions[4] = "Modern Floral Circles Cream Area Rug                     ";
         
-        itemPrices[0] = 420.74;
-        itemPrices[1] = 116.99;
-        itemPrices[2] = 1049.98;
-        itemPrices[3] = 199.32;
-        itemPrices[4] = 146.48;
+        itemPrices[0] = 248.25;
+        itemPrices[1] = 174.24;
+        itemPrices[2] = 144.49;
+        itemPrices[3] = 123.24;
+        itemPrices[4] = 106.22;
     }
     
     //This function will make sure that the item is available to buy and will call to change the stock
@@ -57,14 +56,14 @@ public class BedBath extends Category{
     //this will print out the list of available items in this category
     @Override
     public void showAvailableItems(){
-        File inputT = new File("BedBath.txt");
+        File inputT = new File("Rugs.txt");
         Scanner sc = null;
         try {
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Item Number\tDescription\t\t\t\t\t\tPrice\t\tQuantity In Stock");
+        System.out.println("Item Number\tDescription\t\t\t\t\t\t\t\tPrice\t\tQuantity In Stock");
         for(int i = 0; i <= 4; i++){
             System.out.print(sc.nextInt() + "\t\t" + itemDescriptions[i] + "\t\t" + itemPrices[i] + "\t\t");
             int test = sc.nextInt();
@@ -81,8 +80,8 @@ public class BedBath extends Category{
     // the total they wish to buy or put back and a boolean to see if they are removing or adding
     @Override
     public boolean changeStock(int itemNum, int total, boolean remove){
-        File inputT = new File("BedBath.txt");
-        File temp = new File("tempBB.txt");
+        File inputT = new File("Rugs.txt");
+        File temp = new File("tempRug.txt");
         int test;
         boolean ret = false;
         Scanner sc = null;

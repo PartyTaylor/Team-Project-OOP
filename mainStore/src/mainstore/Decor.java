@@ -11,32 +11,29 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 /**
- *
  * @author Taylor Jones
- * @author Emily Rodriguez 
+ * @author Emily Rodriguez
  */
-public class BedBath extends Category{
-    
+public class Decor extends Category{
     //initalize the needed varibales
     PrintWriter pw;
     String [] itemDescriptions = new String[5];
     double [] itemPrices = new double[5];
     
     //sets the descriptions for the names
-    public BedBath() throws FileNotFoundException {
-        itemDescriptions[0] = "Harper Blvd Laird Granite Top Bath Vanity Sink";
-        itemDescriptions[1] = "Classique Espresso Double-door Floor Cabinet";
-        itemDescriptions[2] = "OVE Decors Rachel 70-inch Freestanding Bathtub";
-        itemDescriptions[3] = "Brown Upholstered Headboard with DiamondTufting";
-        itemDescriptions[4] = "1-Drawer Side Table w/ Charing Dock by iNSPIRE";
+    public Decor() throws FileNotFoundException {
+        itemDescriptions[0] = "ATI Home Kochi Linen Blend Grommet-top Curtain Panel Pair";
+        itemDescriptions[1] = "Abbyson Olivia Rectangle Wall Mirror                       ";
+        itemDescriptions[2] = "Abbyson Silver Mercury Antiqued Glass Table Lamp (set of 2)";
+        itemDescriptions[3] = "Danya B. Five Level Asymmetric Shelf-White               ";
+        itemDescriptions[4] = "Harper Blvd Dublin 70-inch Mahogany Bookcase/Fireplace   ";
         
-        itemPrices[0] = 420.74;
-        itemPrices[1] = 116.99;
-        itemPrices[2] = 1049.98;
-        itemPrices[3] = 199.32;
-        itemPrices[4] = 146.48;
+        itemPrices[0] = 112.04;
+        itemPrices[1] = 114.38;
+        itemPrices[2] = 170.99;
+        itemPrices[3] = 76.46;
+        itemPrices[4] = 477.69;
     }
     
     //This function will make sure that the item is available to buy and will call to change the stock
@@ -57,14 +54,14 @@ public class BedBath extends Category{
     //this will print out the list of available items in this category
     @Override
     public void showAvailableItems(){
-        File inputT = new File("BedBath.txt");
+        File inputT = new File("Decor.txt");
         Scanner sc = null;
         try {
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Item Number\tDescription\t\t\t\t\t\tPrice\t\tQuantity In Stock");
+        System.out.println("Item Number\tDescription\t\t\t\t\t\t\t\tPrice\t\tQuantity In Stock");
         for(int i = 0; i <= 4; i++){
             System.out.print(sc.nextInt() + "\t\t" + itemDescriptions[i] + "\t\t" + itemPrices[i] + "\t\t");
             int test = sc.nextInt();
@@ -81,8 +78,8 @@ public class BedBath extends Category{
     // the total they wish to buy or put back and a boolean to see if they are removing or adding
     @Override
     public boolean changeStock(int itemNum, int total, boolean remove){
-        File inputT = new File("BedBath.txt");
-        File temp = new File("tempBB.txt");
+        File inputT = new File("Decor.txt");
+        File temp = new File("tempDec.txt");
         int test;
         boolean ret = false;
         Scanner sc = null;

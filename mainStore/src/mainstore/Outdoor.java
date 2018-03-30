@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  * @author Taylor Jones
  * @author Emily Rodriguez 
  */
-public class BedBath extends Category{
+public class Outdoor extends Category{
     
     //initalize the needed varibales
     PrintWriter pw;
@@ -25,18 +25,18 @@ public class BedBath extends Category{
     double [] itemPrices = new double[5];
     
     //sets the descriptions for the names
-    public BedBath() throws FileNotFoundException {
-        itemDescriptions[0] = "Harper Blvd Laird Granite Top Bath Vanity Sink";
-        itemDescriptions[1] = "Classique Espresso Double-door Floor Cabinet";
-        itemDescriptions[2] = "OVE Decors Rachel 70-inch Freestanding Bathtub";
-        itemDescriptions[3] = "Brown Upholstered Headboard with DiamondTufting";
-        itemDescriptions[4] = "1-Drawer Side Table w/ Charing Dock by iNSPIRE";
+    public Outdoor() throws FileNotFoundException {
+        itemDescriptions[0] = "Carolina Acacia 8-peice Outdoor Sofa set      ";
+        itemDescriptions[1] = "Backyard Discovery Garden Potting Bench       ";
+        itemDescriptions[2] = "La Vida Steel Hanging Chair                   ";
+        itemDescriptions[3] = "Indoor/Outdoor Floral Rainbow Multi Rug       ";
+        itemDescriptions[4] = "LUMINITES Solar Powered LED String Light Bulbs";
         
-        itemPrices[0] = 420.74;
-        itemPrices[1] = 116.99;
-        itemPrices[2] = 1049.98;
-        itemPrices[3] = 199.32;
-        itemPrices[4] = 146.48;
+        itemPrices[0] = 671.99;
+        itemPrices[1] = 119.99;
+        itemPrices[2] = 199.99;
+        itemPrices[3] = 58.64;
+        itemPrices[4] = 29.99;
     }
     
     //This function will make sure that the item is available to buy and will call to change the stock
@@ -57,7 +57,7 @@ public class BedBath extends Category{
     //this will print out the list of available items in this category
     @Override
     public void showAvailableItems(){
-        File inputT = new File("BedBath.txt");
+        File inputT = new File("Outdoor.txt");
         Scanner sc = null;
         try {
             sc = new Scanner(inputT);
@@ -81,8 +81,8 @@ public class BedBath extends Category{
     // the total they wish to buy or put back and a boolean to see if they are removing or adding
     @Override
     public boolean changeStock(int itemNum, int total, boolean remove){
-        File inputT = new File("BedBath.txt");
-        File temp = new File("tempBB.txt");
+        File inputT = new File("Outdoor.txt");
+        File temp = new File("tempOut.txt");
         int test;
         boolean ret = false;
         Scanner sc = null;
