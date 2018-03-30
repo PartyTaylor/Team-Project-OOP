@@ -19,17 +19,21 @@ public abstract class User
     private String EmailAddress;
     private String Password;
     private String Username;
-    private boolean AllowAdmin; ??? 
+    private boolean AllowAdmin; 
+    private int UserID;
+    private int Membership;
     /**
      * @param args the command line arguments
      */
-    public User(String Username, String Password, String FirstName, String LastName, String MiddleInitial)
+    public User
      {
             setUsername(Username);
             setPassword(Password);
             setFirstName(FirstName);
             setLastName(LastName);
             setMiddleIntial(MiddleInital);
+            setMembership(Membership);
+            setUserID(UserID);
      }
      
      public final void setUsername(String Username)
@@ -55,6 +59,16 @@ public abstract class User
     public final void setMiddleInitial(String MiddleInitial)
     {
         this.MiddleIntital = MiddleInitial
+    }
+    
+    public final void setUserID(int UserID)
+    {
+        this.UserID = UserID;
+    }
+    
+    public final void setMembership(int Membership)
+    {
+        this.Membership = Membership;
     }
     
     public final String getUsername()
@@ -94,6 +108,24 @@ public abstract class User
     {
         return this.LastName;
     }
-    public final String 
+    public final String MiddleInitial()
+    {
+        return this.MiddleInitial;
+    }
     
-     public void 
+     public final int getUserID()
+     {
+         return this.UserID;
+     }
+    
+    public final int getMembership()
+    {
+        return int.Membership;
+    }
+    
+    public final boolean getAllowAdmin()
+    {
+        return this.AllowAdmin;
+    }
+
+    public 
