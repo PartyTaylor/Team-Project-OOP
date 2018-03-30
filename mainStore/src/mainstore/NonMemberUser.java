@@ -7,7 +7,8 @@ package uberstock;
 
 /**
  *
- * @author arnol
+ * @author Taylor Jones
+ * @author Emily Rodriguez
  */
 public class  NonMemberUser extends User
 {
