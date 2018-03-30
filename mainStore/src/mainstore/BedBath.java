@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mainstore;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -14,35 +15,38 @@ import java.util.logging.Logger;
 /**
  *
  * @author Taylor Jones
- * @author Emily Rodriguez
+ * @author Emily Rodriguez 
  */
-public class bathroom extends Category {
-
+public class BedBath extends Category{
+    
     //initalize the needed varibales
     PrintWriter pw;
     String [] itemDescriptions = new String[5];
     double [] itemPrices = new double[5];
     
     //sets the descriptions for the names
-    public bathroom() throws FileNotFoundException {
+    public BedBath() throws FileNotFoundException {
         itemDescriptions[0] = "Harper Blvd Laird Granite Top Bath Vanity Sink";
         itemDescriptions[1] = "Classique Espresso Double-door Floor Cabinet";
         itemDescriptions[2] = "OVE Decors Rachel 70-inch Freestanding Bathtub";
-        itemDescriptions[3] = "Mohawk Home Spa Bath Rug                    ";
-        itemDescriptions[4] = "1-Drawer Side Table w/ Charing Dock by iNSPIRE Q Bold";
+        itemDescriptions[3] = "Brown Upholstered Headboard with DiamondTufting";
+        itemDescriptions[4] = "1-Drawer Side Table w/ Charing Dock by iNSPIRE";
         
         itemPrices[0] = 420.74;
         itemPrices[1] = 116.99;
         itemPrices[2] = 1049.98;
-        itemPrices[3] = 48.14;
-        itemPrices[4] = 123.74;
+        itemPrices[3] = 199.32;
+        itemPrices[4] = 146.48;
     }
     
     //This function will make sure that the item is available to buy and will call to change the stock
     @Override
     public int buyItem(int itemNum, int total){
         if(changeStock(itemNum, total, true))
+        {
+            System.out.println("Added to Cart!");
             return 1;
+        }
         else
         {
             System.out.println("That item number is false or the stock is UNAVAILABLE, please try again!");
