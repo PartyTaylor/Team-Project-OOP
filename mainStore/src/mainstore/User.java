@@ -7,7 +7,8 @@ package uberstock;
 
 /**
  *
- * @author arnol
+ * @author Taylor Jones
+ * @author Emily Rodriguez
  */
 public abstract class User 
 {
