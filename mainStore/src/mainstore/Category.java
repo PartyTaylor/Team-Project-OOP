@@ -14,10 +14,9 @@ public abstract class Category {
     
     public abstract void showAvailableItems();
     
-    public abstract void buyItem();
+    public abstract int buyItem(int itemNum, int total);
     
-    public abstract void cancelItem();
-    
-    
-    
+    public abstract boolean changeStock(int itemNum, int total, boolean remove);
+
+    public abstract int cancelItem(int cancel);
 }

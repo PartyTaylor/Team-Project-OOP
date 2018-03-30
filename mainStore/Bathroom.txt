@@ -1,0 +1,6 @@
+Item Number		Description                                                     Price			Quantity In Stock
+1001			Harper Blvd Laird Granite Top Bath Vanity Sink                  $420.74			4
+1002			Classique Espresso Double-door Floor Cabinet                    $116.99			5
+1003			OVE Decors Rachel 70-inch Freestanding Bathtub                  $1,049.98		1
+1004			Mohawk Home Spa Bath Rug                                        $48.14			20
+1005			Bayfield Dark Espresso 2-door Linen Tower by Essential Home     $123.74			21
