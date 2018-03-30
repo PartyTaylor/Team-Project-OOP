@@ -8,7 +8,8 @@ package uberstock;
 import java.util.Scanner;
 /**
  *
- * @author arnol
+ * @author Taylor Jones
+ * @author Emily Rodriguez
  */
 public class Login {
     
@@ -16,16 +17,14 @@ public class Login {
         String Username;
         String Password;
         
-        Password = " ";
-        Username = " ";
-        
-        Scanner input1 = new Scanner(System.in);
+        System.out.println("Login");
+        Scanner User = new Scanner(System.in);
         System.out.println("Enter Username: ");
-        Username = input1.next();
+        Username = User.next();
         
-        Scanner input2 = new Scanner(System.in);
+        Scanner Pass = new Scanner(System.in);
         System.out.println("Enter Password: ");
-        Password = input2.next();
+        Password = Pass.next();
         
         if(Username.equals(Username) && Password.equals(Password)){
             
