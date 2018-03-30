@@ -1,8 +1,0 @@
-package UberStock
-
-@author Taylor Jones 
-@author Emily Rodriguez
-
-public class NonMemberUser extends User
-{
-    ask to upgrade??
