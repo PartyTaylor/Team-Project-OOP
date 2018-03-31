@@ -61,9 +61,9 @@ public class Kitchen extends Category{
         try {
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Kitchen.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Item Number\tDescription\t\t\t\t\t\t\t\t\t\t\tPrice\t\tQuantity In Stock");
+        System.out.println("Item Number\tDescription\t\t\t\t\\t\t\t\t\t\tPrice\t\tQuantity In Stock");
         for(int i = 0; i <= 4; i++){
             System.out.print(sc.nextInt() + "\t\t" + itemDescriptions[i] + "\t\t" + itemPrices[i] + "\t\t");
             int test = sc.nextInt();
@@ -90,7 +90,7 @@ public class Kitchen extends Category{
             pw = new PrintWriter(temp);
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Kitchen.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         while(sc.hasNextInt())

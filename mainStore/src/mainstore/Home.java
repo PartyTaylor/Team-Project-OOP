@@ -62,7 +62,7 @@ public class Home extends Category{
         try {
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("Item Number\tDescription\t\t\t\t\t\t\t\tPrice\t\tQuantity In Stock");
         for(int i = 0; i <= 4; i++){
@@ -91,7 +91,7 @@ public class Home extends Category{
             pw = new PrintWriter(temp);
             sc = new Scanner(inputT);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(bathroom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         while(sc.hasNextInt())
