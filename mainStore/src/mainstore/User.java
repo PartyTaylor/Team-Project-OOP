@@ -13,87 +13,175 @@ package uberstock;
 public abstract class User 
 {
 
-    private String FirstName;
+   private String FirstName;
+
     private String LastName;
-    private String MiddleIntial;
+
+    private String MiddleInitial;
+
     private String EmailAddress;
+
     private String Password;
+
     private String Username;
-    private boolean AllowAdmin; ??? 
+
+    private boolean AllowAdmin; 
+
+    private int UserID;
+
+    private int Membership;
+
     /**
-     * @param args the command line arguments
+
+     *      
+     * @param Username
      */
-    public User(String Username, String Password, String FirstName, String LastName, String MiddleInitial)
-     {
-            setUsername(Username);
-            setPassword(Password);
-            setFirstName(FirstName);
-            setLastName(LastName);
-            setMiddleIntial(MiddleInital);
-     }
      
+
      public final void setUsername(String Username)
+
      {
+
          this.Username = Username;
+
      }
+
      public final void setPassword(String Password)
+
     {
+
         this.Password = Password;
+
     }
+
     public final void setAllowAdmin(Boolean AllowAdmin)
+
     {
+
         this.AllowAdmin = AllowAdmin;
+
     }
+
     public final void setFirstName(String FirstName)
+
     {
+
         this.FirstName = FirstName;
+
     }
+
     public final void setLastName(String LastName)
+
     {
+
         this.LastName = LastName;
+
     }
+
     public final void setMiddleInitial(String MiddleInitial)
+
     {
-        this.MiddleIntital = MiddleInitial
+
+        this.MiddleInitial = MiddleInitial;
+
+    }
+
+    
+
+    public final void setUserID(int UserID)
+
+    {
+
+        this.UserID = UserID;
+
+    }
+
+    
+
+    public final void setMembership(int Membership)
+
+    {
+
+        this.Membership = Membership;
+
+    }
+    
+    public final void setEmailAddress(String EmailAddress)
+    {
+        this.EmailAddress = EmailAddress;
+    }
+
+    public final String EmailAddress()
+    {
+        return this.EmailAddress;
     }
     
     public final String getUsername()
+
     {
+
         return this.Username;
+
     }
-    
+
     public final String getPasword()
+
     {
+
         return this.Password;
+
     }
-    
+
     public final String getFirstName()
+
     {
+
         return this.FirstName;
+
     }
-    
+
     public final String getLastName()
+
     {
+
         return this.LastName;
-    }
-    
+
+    }   
+
     public final String getMiddleInitial()
+
     {
-        return this.MiddleIntial;
+
+        return this.MiddleInitial;
+
     }
-    
+
     public final String getPassword()
     {
         return this.Password;
+
     }
-    public final String getFirstName()
+
+    public final String MiddleInitial()
     {
-        return this.FirstName;
+
+        return this.MiddleInitial;
+
     }
-    public final String getLastName()
+
+     public final int getUserID()
+     {
+        return this.UserID;
+
+     }
+
+    public final int getMembership()
     {
-        return this.LastName;
+        return this.Membership;
     }
-    public final String 
+
     
-     public void 
+    public final boolean getAllowAdmin()
+    {
+        return this.AllowAdmin;
+    }
